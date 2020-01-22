@@ -1,0 +1,55 @@
+/* menu button */ 
+
+.menu-btn {
+    position: absolute;
+    z-index: 3;
+    top: 35px;
+    right: 35px;
+    cursor: pointer;
+    @include easeOut;
+    
+    .btn-line {
+        width: 28px;
+        height: 3px;
+        margin-bottom: 5px;
+        background: #fff;
+        @include easeOut;
+    }
+    &.close {
+        transform: rotate(180deg);
+
+        .btn-line {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px)
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px)
+            }
+        }
+    }
+}
+
+/* menu */ 
+
+.menu {
+    width: 100%;
+    height: 100vh;
+    background: rgba(lighten($primary-color, 2), 0.7);;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .menu-branding {
+        align-self: center;
+        
+        
+       img {
+           border-radius: 50%;
+           border: 2px solid $secondary-color
+       }
+    }
+}
